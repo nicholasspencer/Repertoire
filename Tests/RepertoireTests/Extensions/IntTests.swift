@@ -9,8 +9,8 @@ class IntTests: XCTestCase {
   }
   
   func test_static_leastCommonMultiplier() {
-    XCTAssertEqual(Int.leastCommonMultiplier(12, 80), 240)
-    XCTAssertEqual(Int.leastCommonMultiplier(3, 5), 15)
+    XCTAssertEqual(Int.leastCommonMultiple(12, 80), 240)
+    XCTAssertEqual(Int.leastCommonMultiple(3, 5), 15)
   }
   
   func test_greatestCommonDivisor() {
@@ -20,8 +20,8 @@ class IntTests: XCTestCase {
   }
   
   func test_leastCommonMultiplier() {
-    XCTAssertEqual(12.leastCommonMultiplier(80), 240)
-    XCTAssertEqual(3.leastCommonMultiplier(5), 15)
+    XCTAssertEqual(12.leastCommonMultiple(80), 240)
+    XCTAssertEqual(3.leastCommonMultiple(5), 15)
   }
   
   func test_array_greatestCommonDivisor() {
@@ -31,8 +31,8 @@ class IntTests: XCTestCase {
   }
   
   func test_array_leastCommonMultiplier() {
-    XCTAssertEqual([12, 80].leastCommonMultiplier, 240)
-    XCTAssertEqual([3, 5].leastCommonMultiplier, 15)
+    XCTAssertEqual([12, 80].leastCommonMultiple, 240)
+    XCTAssertEqual([3, 5].leastCommonMultiple, 15)
   }
   
   func test_array_greatestCommonDivisor_lessThanTwo() {
@@ -41,7 +41,7 @@ class IntTests: XCTestCase {
   }
   
   func test_array_leastCommonMultiplier_lessThanTwo() {
-    XCTAssertNil([1].leastCommonMultiplier)
-    XCTAssertNil([2].leastCommonMultiplier)
+    XCTAssertNil([1].leastCommonMultiple)
+    XCTAssertNil([2].leastCommonMultiple)
   }
 }

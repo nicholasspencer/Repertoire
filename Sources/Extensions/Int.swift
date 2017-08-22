@@ -14,7 +14,7 @@ extension Int {
     return a
   }
   
-  static func leastCommonMultiplier(_ left: Int, _ right: Int) -> Int {
+  static func leastCommonMultiple(_ left: Int, _ right: Int) -> Int {
     return left * (right / greatestCommonDivisor(left, right))
   }
   
@@ -22,8 +22,8 @@ extension Int {
     return Int.greatestCommonDivisor(self, right)
   }
   
-  func leastCommonMultiplier(_ right: Int) -> Int {
-    return Int.leastCommonMultiplier(self, right)
+  func leastCommonMultiple(_ right: Int) -> Int {
+    return Int.leastCommonMultiple(self, right)
   }
 }
 
@@ -38,13 +38,13 @@ extension Array where Iterator.Element == Int {
     }
   }
   
-  var leastCommonMultiplier: Int? {
+  var leastCommonMultiple: Int? {
     if self.count <= 1 {
       return nil
     }
     
     return self.enumerated().dropFirst().reduce(self[0]) { result, next in
-      return result.leastCommonMultiplier(next.element)
+      return result.leastCommonMultiple(next.element)
     }
   }
 }
