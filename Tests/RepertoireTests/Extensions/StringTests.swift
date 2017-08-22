@@ -9,6 +9,6 @@ class StringTests: XCTestCase {
 
 extension StringTests {
   static var allTests = [
-    ("test_intComponents", ints),
+    ("test_ints", test_ints),
     ]
 }
