@@ -35,14 +35,24 @@ class IntTests: XCTestCase {
     XCTAssertEqual([3, 5].leastCommonMultiple, 15)
   }
   
-  func test_array_greatestCommonDivisor_lessThanTwo() {
-    XCTAssertNil([1].greatestCommonDivisor)
-    XCTAssertNil([2].greatestCommonDivisor)
+  func test_array_greatestCommonDivisor_oneElement() {
+    XCTAssertEqual([1].greatestCommonDivisor, 1)
+    XCTAssertEqual([2].greatestCommonDivisor, 2)
   }
   
-  func test_array_leastCommonMultiplier_lessThanTwo() {
-    XCTAssertNil([1].leastCommonMultiple)
-    XCTAssertNil([2].leastCommonMultiple)
+  func test_array_leastCommonMultiplier_oneElement() {
+    XCTAssertEqual([1].leastCommonMultiple, 1)
+    XCTAssertEqual([2].leastCommonMultiple, 2)
+  }
+  
+  func test_array_greatestCommonDivisor_zeroElements() {
+    XCTAssertNil([].greatestCommonDivisor)
+    XCTAssertNil([].greatestCommonDivisor)
+  }
+  
+  func test_array_leastCommonMultiplier_zeroElements() {
+    XCTAssertNil([].leastCommonMultiple)
+    XCTAssertNil([].leastCommonMultiple)
   }
 }
 
@@ -54,7 +64,9 @@ extension IntTests {
     ("test_leastCommonMultiplier", test_leastCommonMultiplier),
     ("test_array_greatestCommonDivisor", test_array_greatestCommonDivisor),
     ("test_array_leastCommonMultiplier", test_array_leastCommonMultiplier),
-    ("test_array_greatestCommonDivisor_lessThanTwo", test_array_greatestCommonDivisor_lessThanTwo),
-    ("test_array_leastCommonMultiplier_lessThanTwo", test_array_leastCommonMultiplier_lessThanTwo)
+    ("test_array_greatestCommonDivisor_oneElement", test_array_greatestCommonDivisor_oneElement),
+    ("test_array_leastCommonMultiplier_oneElement", test_array_leastCommonMultiplier_oneElement),
+    ("test_array_greatestCommonDivisor_zeroElements", test_array_greatestCommonDivisor_zeroElements),
+    ("test_array_leastCommonMultiplier_zeroElements", test_array_leastCommonMultiplier_zeroElements)
     ]
 }

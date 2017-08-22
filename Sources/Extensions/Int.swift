@@ -29,8 +29,12 @@ extension Int {
 
 extension Array where Iterator.Element == Int {
   var greatestCommonDivisor: Int? {
-    if self.count <= 1 {
+    if self.count == 0 {
       return nil
+    }
+    
+    if self.count == 1 {
+      return self[0]
     }
     
     return self.enumerated().dropFirst().reduce(self[0]) { result, next in
@@ -39,8 +43,12 @@ extension Array where Iterator.Element == Int {
   }
   
   var leastCommonMultiple: Int? {
-    if self.count <= 1 {
+    if self.count == 0 {
       return nil
+    }
+    
+    if self.count == 1 {
+      return self[0]
     }
     
     return self.enumerated().dropFirst().reduce(self[0]) { result, next in
