@@ -45,3 +45,16 @@ class IntTests: XCTestCase {
     XCTAssertNil([2].leastCommonMultiple)
   }
 }
+
+extension IntTests {
+  static var allTests = [
+    ("test_static_greatestCommonDivisor", test_static_greatestCommonDivisor),
+    ("test_static_leastCommonMultiplier", test_static_leastCommonMultiplier),
+    ("test_greatestCommonDivisor", test_greatestCommonDivisor),
+    ("test_leastCommonMultiplier", test_leastCommonMultiplier),
+    ("test_array_greatestCommonDivisor", test_array_greatestCommonDivisor),
+    ("test_array_leastCommonMultiplier", test_array_leastCommonMultiplier),
+    ("test_array_greatestCommonDivisor_lessThanTwo", test_array_greatestCommonDivisor_lessThanTwo),
+    ("test_array_leastCommonMultiplier_lessThanTwo", test_array_leastCommonMultiplier_lessThanTwo)
+    ]
+}
